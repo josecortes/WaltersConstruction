@@ -1,4 +1,10 @@
 WaltersConstruction::Application.routes.draw do
+  get "pages/login"
+
+  get "pages/emp_home"
+
+  get "pages/emp_hours"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
