@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def login
-   @title = "This is just a test"
+   @title = "Walters Construction Home"
    
   end
 
