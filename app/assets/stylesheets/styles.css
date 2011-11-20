@@ -53,8 +53,8 @@ html,body  {
 #center {
   background-color:#dddddd ;
   position:relative;
-  margin-left:200px;
-  margin-right:200px;
+  margin-left:00px;
+  margin-right:00px;
   float:none;
   display: block;
   height: 1%;
@@ -69,6 +69,11 @@ html,body  {
   margin-left: 200px;
   margin-right: 200px;
   background-color:#b07530;
+}
+
+#core_center {
+	position:relative;
+    text-align: center;
 }
 
 .clear {
