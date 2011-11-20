@@ -1,9 +1,7 @@
 WaltersConstruction::Application.routes.draw do
-  get "pages/login"
 
-  get "pages/emp_home"
-
-  get "pages/emp_hours"
+  root :to => "pages#login"
+  match 'emp_home' , :to => 'pages#emp_home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

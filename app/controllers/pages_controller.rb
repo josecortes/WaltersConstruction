@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   def login
-   @title = "Login"
-   
+   @title = "Login"  
   end
 
   def emp_home
