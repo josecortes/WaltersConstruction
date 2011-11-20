@@ -1,15 +1,15 @@
 class PagesController < ApplicationController
   def login
-   @title = "Walters Construction Login"
+   @title = "Login"
    
   end
 
   def emp_home
-    @title = "Employee Home"
+    @title = "Home"
   end
 
   def emp_hours
-    @title = "Employee Hours Entry"
+    @title = "Entry"
   end
 
 end

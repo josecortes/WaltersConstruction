@@ -12,7 +12,7 @@ describe PagesController do
     it "home should have the right title" do
       get 'login'
       response.should have_selector("title",
-        :content=> "Walters Construction Login")
+        :content=> "Walters Construction - Login")
     end
   end
   
