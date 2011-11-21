@@ -4,6 +4,7 @@ WaltersConstruction::Application.routes.draw do
   root :to => "pages#login"
   match 'emp_home' , :to => 'pages#emp_home'
   match 'emp_hours', :to => 'pages#emp_hours'
+  match 'own_home', :to => 'pages#own_home'
 
 
   # The priority is based upon order of creation:

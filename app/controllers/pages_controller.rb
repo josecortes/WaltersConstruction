@@ -12,4 +12,7 @@ class PagesController < ApplicationController
     @title = "Entry"
   end
 
+  def own_home
+    @title = "Home"
+  end
 end
