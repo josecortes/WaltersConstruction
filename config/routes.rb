@@ -1,10 +1,10 @@
 WaltersConstruction::Application.routes.draw do
 
-  get "users/new"
 
   root :to => "pages#login"
   match 'emp_home' , :to => 'pages#emp_home'
   match 'emp_hours', :to => 'pages#emp_hours'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
