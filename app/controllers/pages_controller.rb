@@ -1,4 +1,5 @@
-rails class PagesController < ApplicationController
+class PagesController < ApplicationController
+
   def login
    @title = "Login"  
   end
