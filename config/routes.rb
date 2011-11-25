@@ -1,6 +1,8 @@
 WaltersConstruction::Application.routes.draw do
 
 
+  resources :messages
+
   resources :users
 
   root :to => "pages#login"
