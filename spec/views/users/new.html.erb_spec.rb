@@ -16,7 +16,7 @@ describe "users/new.html.erb" do
     assert_select "form", :action => users_path, :method => "post" do
       assert_select "input#user_name", :name => "user[name]"
       assert_select "input#user_email", :name => "user[email]"
-      assert_select "input#user_type", :name => "user[type]"
+      assert_select "input#user_position", :name => "user[position]"
     end
   end
 end

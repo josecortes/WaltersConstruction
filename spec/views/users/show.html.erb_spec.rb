@@ -5,7 +5,7 @@ describe "users/show.html.erb" do
     @user = assign(:user, stub_model(User,
       :name => "Name",
       :email => "Email",
-      :type => "Type"
+      :type => "Position"
     ))
   end
 
@@ -16,6 +16,6 @@ describe "users/show.html.erb" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Email/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Type/)
+    rendered.should match(/Positon/)
   end
 end
