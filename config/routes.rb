@@ -1,6 +1,8 @@
 WaltersConstruction::Application.routes.draw do
 
 
+  resources :users
+
   root :to => "pages#login"
   match 'emp_home' , :to => 'pages#emp_home'
   match 'emp_hours', :to => 'pages#emp_hours'
