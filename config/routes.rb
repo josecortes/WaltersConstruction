@@ -1,14 +1,19 @@
 WaltersConstruction::Application.routes.draw do
 
 
-  resources :messages
+  get "sessions/new"
 
+  resources :messages
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+ 
 
   root :to => "pages#login"
   match 'emp_home' , :to => 'pages#emp_home'
   match 'emp_hours', :to => 'pages#emp_hours'
   match 'own_home', :to => 'pages#own_home'
+  match 'signin', :to => 'sessions#new'
+  match 'signout', :to => 'sessions#destroy'
 
 
   # The priority is based upon order of creation:

@@ -1,0 +1,31 @@
+
+<div id = "inner">
+
+
+  <div id="center"><br/>Please log in<br/><br/></div>
+	<br/>
+	<br/>	
+	<div id="core_center">
+		<center>
+	<%= form_for(:session, :url => sessions_path) do |f| %>
+	<br/>
+	<table>
+	<tr>
+	  <td align="right" ><%= f.label :name %></td>
+	  <td><%= f.text_field :name %></td>
+	</tr>
+	<br/>
+    <tr>
+      <td> <%= f.label :password %></td>
+      <td><%= f.text_field :password %></td>
+    </tr>
+    </table>
+    <br/>
+    <%= f.submit "Login"%>
+    </center>
+    <br/>
+		<div id = "left"></div>
+<% end %>
+
+</div>
+</div>
