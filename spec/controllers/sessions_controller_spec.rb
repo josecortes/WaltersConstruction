@@ -13,6 +13,25 @@ describe SessionsController do
       get 'new'
       response.should have_selector ("title", :content => "Login")
     end
+    
+    
+    describe "POST" 'create' do
+      
+      describe "invalid signin" do
+        before(:each) do
+          @attr = { :name => "username", :password => "invalid"}
+        end
+        
+        it "should re-render the new page" do
+          post :create, :session => @attr
+          response.should have_selector("title", :content => "Sing in")
+        end
+        
+        if "should have a flash.now messge" do
+          post :create, :session => @attr
+          flash.now[:error].should =~ /invalid/i
+        end
+      end
   end
 
 end
