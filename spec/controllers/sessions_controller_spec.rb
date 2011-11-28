@@ -11,9 +11,9 @@ describe SessionsController do
     
     it 'should have the right title' do
       get 'new'
-      response.should have_selector ("title", :content => "Login")
+      response.should have_selector("title", :content => "Login")
     end
-    
+ end   
     
     describe "POST" 'create' do
       
@@ -27,7 +27,7 @@ describe SessionsController do
           response.should have_selector("title", :content => "Sing in")
         end
         
-        if "should have a flash.now messge" do
+        it "should have a flash.now messge" do
           post :create, :session => @attr
           flash.now[:error].should =~ /invalid/i
         end

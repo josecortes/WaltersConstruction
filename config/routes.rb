@@ -8,7 +8,7 @@ WaltersConstruction::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
  
 
-  root :to => "pages#login"
+  root :to => "sessions#new"
   match 'emp_home' , :to => 'pages#emp_home'
   match 'emp_hours', :to => 'pages#emp_hours'
   match 'own_home', :to => 'pages#own_home'
