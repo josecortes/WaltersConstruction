@@ -1,5 +1,28 @@
 require 'spec_helper'
 
 describe User do
- @att = { :name => }
+  
+  before(:each) do
+    @att = { :name => "Example name", :email => "user@example.com", :password => "pwd", :position => "pos"}
+  end
+
+  it "should create a new instance given valid attributes" do
+    User.create!(@attr)
+  end
+
+  it "should require a name" do
+    no_name_user = User.new(@attr.merge(:name => ""))
+    no_name_user.should_not be_valid
+  end
+  
+  it "should require an email" do
+    no_email_user = User.new(@attr.merge(:email => ""))
+    no_email_user.should_not be_valid
+  end
+  
+  it "should reject duplicate names" do
+    User.create!(@attr)
+    user_with_duplicate_name = User.new(@attr)
+    user_with_duplicate_name.should_not be_valid
+  end
 end
