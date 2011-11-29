@@ -5,13 +5,19 @@ class SessionsController < ApplicationController
   
   def create
     user = User.authenticate(params[:session][:name],
-                             params[:session][:password]
-                             params[:session][:position])
+                             params[:session][:password])
     if user.nil?
-      flash.now[:error] = "Invalid name/password combination."
+     # flash.now[:error] = "Invalid name/password combination."
       @title = "Login"
+      render 'new'
     else
-      #sign in the user and ridirect
+      session[:remember_token] = user.name
+      login user
+      if user.position == "owner"  
+        redirect_to own_home_path
+      else
+        redirect_to emp_home_path
+      end
     end
   end
   
