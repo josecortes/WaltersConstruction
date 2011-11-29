@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
   
   before(:each) do
-    @att = { :name => "Example name", :email => "user@example.com", :password => "pwd", :position => "pos"}
+    @attr = { :name => "Example name", :email => "user@example.com", :password => "pwd", :position => "pos"}
   end
 
   it "should create a new instance given valid attributes" do
@@ -24,5 +24,23 @@ describe User do
     User.create!(@attr)
     user_with_duplicate_name = User.new(@attr)
     user_with_duplicate_name.should_not be_valid
+  end
+  
+  describe "authentication method" do
+    
+    it "should return nil on email/password mismatch" do
+      wrong_password_user = User.authenticate(@attr[:name], "wrongpass")
+      wrong_password_user.should be_nil
+    end
+    
+    it "should return nil for a name with no user" do
+      nonexits_user = User.authenticate("foobar", @attr[:password])
+      nonexits_user.should be_nil
+  end  
+  
+  it "should return the user on name/password match" do
+    matching_user = User.authenticate(@attr[:name], @attr[:password])
+    matching_user.should == @user
+  end
   end
 end
