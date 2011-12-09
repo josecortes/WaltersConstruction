@@ -1,10 +1,13 @@
 WaltersConstruction::Application.routes.draw do
 
 
+  resources :hours
+
   get "sessions/new"
 
   resources :messages
   resources :users
+  resources :hours
   resources :sessions, :only => [:new, :create, :destroy]
  
 
