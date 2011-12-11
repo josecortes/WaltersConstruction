@@ -44,6 +44,7 @@ class HoursController < ApplicationController
   # POST /hours.json
   def create
     @hour = Hour.new(params[:hour])
+    @hour[:user_id] = cookies[:user_id]
 
     respond_to do |format|
       if @hour.save

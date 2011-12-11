@@ -1,15 +1,19 @@
-<p id="notice"><%= notice %></p>
+<br/>
+<center>
+<h4>Hours Worked entry completed</h4>
 
 <p>
-  <b>Work date:</b>
+  <b>Date Worked:</b>
   <%= @hour.work_date %>
 </p>
 
 <p>
-  <b>Work hours:</b>
+  <b>Hours Worked:</b>
   <%= @hour.work_hours %>
 </p>
 
 
-<%= link_to 'Edit', edit_hour_path(@hour) %> |
+<%= link_to 'Edit', edit_hour_path(@hour) %> &nbsp&nbsp|
 <%= link_to 'Back', hours_path %>
+<br/><br/>
+</center>

@@ -4,9 +4,9 @@
 		<div id="leftalign">
 		Username: <%= cookies[:remember_token]%><br/>
 		<%= link_to "Logout", logout_path%><br/>
-		Send Message<br/>
-		Run Reports<br/>
-		Change Password<br/>
+		<%= link_to "Send Message", logout_path%><br/>
+		<%= link_to "Run Reports", logout_path%><br/>
+		<%= link_to "Change Password", logout_path%><br/>
 	</div>	
 	</div>
 	
