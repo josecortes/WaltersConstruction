@@ -1,0 +1,24 @@
+<center>
+<br/>
+<h4>Run employee Hours Report</h4>
+<%= form_tag("/search", :method => "post") do %>
+
+<table>
+	<tr>
+    <td><%= label_tag(:employee_id, "Employee ID") %> </td>
+    <td><%= label_tag(:start_date, "Start Date") %></td>
+    <td><%= label_tag(:end_date, "End Date") %></td>
+    </tr>
+    <tr>
+    <td><%= number_field_tag(:employee_id) %></td>
+    <td><%= text_field_tag (:start_date) %></td>
+    <td><%= text_field_tag (:end_date) %></td>
+    </tr>
+</table>
+<br/>
+
+    <%= submit_tag("Run Report") %>
+    <br/><br/>
+<% end %>
+</center>
+<br/>

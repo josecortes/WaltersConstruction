@@ -84,4 +84,8 @@ class HoursController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  def o_report
+    render 'report_params'
+  end
 end

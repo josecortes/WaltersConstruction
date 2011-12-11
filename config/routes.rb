@@ -19,7 +19,7 @@ WaltersConstruction::Application.routes.draw do
   match '/send_message', :to => 'pages#emp_home'
   match '/run_reports', :to => 'pages#emp_home'
   match '/change_password', :to => 'pages#emp_home'
-
+  match '/reports', :to => 'hours#o_report'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
