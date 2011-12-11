@@ -2,6 +2,7 @@ class HoursController < ApplicationController
   # GET /hours
   # GET /hours.json
   def index
+    @title = "Hours Index"
     @hours = Hour.all
 
     respond_to do |format|
@@ -13,6 +14,7 @@ class HoursController < ApplicationController
   # GET /hours/1
   # GET /hours/1.json
   def show
+    @title = "Hours Show"
     @hour = Hour.find(params[:id])
 
     respond_to do |format|
@@ -24,6 +26,7 @@ class HoursController < ApplicationController
   # GET /hours/new
   # GET /hours/new.json
   def new
+    @title = "Hours New"
     @hour = Hour.new
 
     respond_to do |format|

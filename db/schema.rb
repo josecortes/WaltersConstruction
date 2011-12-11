@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111128224110) do
+ActiveRecord::Schema.define(:version => 20111211005130) do
+
+  create_table "hours", :force => true do |t|
+    t.integer  "user_id"
+    t.date     "work_date"
+    t.float    "work_hours"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "messages", :force => true do |t|
     t.string   "headline"

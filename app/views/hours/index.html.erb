@@ -1,8 +1,8 @@
+<center>
 <h1>Listing hours</h1>
 
 <table>
   <tr>
-    <th>User</th>
     <th>Work date</th>
     <th>Work hours</th>
     <th></th>
@@ -12,16 +12,16 @@
 
 <% @hours.each do |hour| %>
   <tr>
-    <td><%= hour.user_id %></td>
     <td><%= hour.work_date %></td>
     <td><%= hour.work_hours %></td>
     <td><%= link_to 'Show', hour %></td>
     <td><%= link_to 'Edit', edit_hour_path(hour) %></td>
-    <td><%= link_to 'Destroy', hour, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete', hour, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Hour', new_hour_path %>
+<%= link_to 'home', emp_home_path%> &nbsp &nbsp
+<%= link_to 'New Hours entry', new_hour_path %>
+</center>

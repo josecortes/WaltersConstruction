@@ -2,12 +2,12 @@
 	
 <div id="left">
 		<div id="leftalign">
-		Username:<br/>
-		Logout<br/><br/>
-		Enter Hours<br/>
-		Send Message<br/>
-		Run Reports<br/>
-		Change Password<br/>
+		Username: <%= cookies[:remember_token]%><br/>
+		<%= link_to "Logout", logout_path%><br/>
+		<%= link_to "Enter Hours", enter_hours_path %><br/>
+		<%= link_to "Send Message", logout_path%><br/>
+		<%= link_to "Run Reports", run_reports_path%><br/>
+		<%= link_to "Change Password", logout_path%><br/>
 	</div>	
 	</div>
 	
