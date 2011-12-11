@@ -4,7 +4,7 @@ describe "hours/new.html.erb" do
   before(:each) do
     assign(:hour, stub_model(Hour,
       :user_id => 1,
-      :worked_hours => 1.5
+      :work_hours => 1.5
     ).as_new_record)
   end
 
@@ -14,7 +14,7 @@ describe "hours/new.html.erb" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "form", :action => hours_path, :method => "post" do
       assert_select "input#hour_user_id", :name => "hour[user_id]"
-      assert_select "input#hour_worked_hours", :name => "hour[worked_hours]"
+      assert_select "input#hour_work_hours", :name => "hour[work_hours]"
     end
   end
 end

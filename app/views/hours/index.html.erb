@@ -3,8 +3,8 @@
 <table>
   <tr>
     <th>User</th>
-    <th>Work data</th>
-    <th>Worked hours</th>
+    <th>Work date</th>
+    <th>Work hours</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +13,8 @@
 <% @hours.each do |hour| %>
   <tr>
     <td><%= hour.user_id %></td>
-    <td><%= hour.work_data %></td>
-    <td><%= hour.worked_hours %></td>
+    <td><%= hour.work_date %></td>
+    <td><%= hour.work_hours %></td>
     <td><%= link_to 'Show', hour %></td>
     <td><%= link_to 'Edit', edit_hour_path(hour) %></td>
     <td><%= link_to 'Destroy', hour, confirm: 'Are you sure?', method: :delete %></td>

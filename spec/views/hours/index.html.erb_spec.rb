@@ -5,11 +5,11 @@ describe "hours/index.html.erb" do
     assign(:hours, [
       stub_model(Hour,
         :user_id => 1,
-        :worked_hours => 1.5
+        :work_hours => 1.5
       ),
       stub_model(Hour,
         :user_id => 1,
-        :worked_hours => 1.5
+        :work_hours => 1.5
       )
     ])
   end

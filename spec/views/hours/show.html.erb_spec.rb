@@ -4,7 +4,7 @@ describe "hours/show.html.erb" do
   before(:each) do
     @hour = assign(:hour, stub_model(Hour,
       :user_id => 1,
-      :worked_hours => 1.5
+      :work_hours => 1.5
     ))
   end
 
