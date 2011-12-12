@@ -1,0 +1,15 @@
+<center>
+
+<h4> Time report</h4>
+<h4> Employee: <%= @emp_name%>
+
+
+<% @hours.each do |hour| %>
+<table>
+  <tr>
+    <td><%= hour.work_date %></td>
+    <td><%= hour.work_hours %></td>
+  </tr>
+  </table>
+<% end %>
+</center>

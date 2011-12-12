@@ -88,4 +88,16 @@ class HoursController < ApplicationController
   def o_report
     render 'report_params'
   end
+  
+  def reprun
+    @hours = Hour.all
+    @employee = User.where(:id => params[:employee_id])
+    @emp_name = @employee.name
+    
+  respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @hours }
+    end
+  end
+
 end
