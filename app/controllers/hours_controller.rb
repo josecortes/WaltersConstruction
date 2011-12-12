@@ -91,7 +91,7 @@ class HoursController < ApplicationController
   
   def reprun
     @hours = Hour.all
-    @employee = User.where(:id => params[:employee_id])
+    @employee = User.getname(params[:employee_id])
     @emp_name = @employee.name
     
   respond_to do |format|

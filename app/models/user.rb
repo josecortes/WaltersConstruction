@@ -18,4 +18,9 @@ class User < ActiveRecord::Base
     return user if user.has_password(submitted_password)
   end
   
+  def self.getname (id)
+    user = find_by_id(id)
+    return user
+  end
+  
 end
