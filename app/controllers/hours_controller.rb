@@ -3,7 +3,7 @@ class HoursController < ApplicationController
   # GET /hours.json
   def index
     @title = "Hours Index"
-    @hours = Hour.all
+    @hours = Hour.where(:user_id => cookies[:user_id])
 
     respond_to do |format|
       format.html # index.html.erb
