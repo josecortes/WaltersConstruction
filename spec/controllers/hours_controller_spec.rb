@@ -24,7 +24,7 @@ describe HoursController do
   # Hour. As you add validations to Hour, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:user_id => '1', :word_date => '2011-12-11', :work_hours => '8.0'}
   end
 
   describe "GET index" do
@@ -39,14 +39,14 @@ describe HoursController do
     it "assigns the requested hour as @hour" do
       hour = Hour.create! valid_attributes
       get :show, :id => hour.id
-      assigns(:hour).should eq(hour)
+      assigns(:hours).should eq(hour)
     end
   end
 
   describe "GET new" do
     it "assigns a new hour as @hour" do
       get :new
-      assigns(:hour).should be_a_new(Hour)
+      assigns(:hours).should be_a_new(Hour)
     end
   end
 
@@ -54,7 +54,7 @@ describe HoursController do
     it "assigns the requested hour as @hour" do
       hour = Hour.create! valid_attributes
       get :edit, :id => hour.id
-      assigns(:hour).should eq(hour)
+      assigns(:hours).should eq(hour)
     end
   end
 
@@ -68,8 +68,8 @@ describe HoursController do
 
       it "assigns a newly created hour as @hour" do
         post :create, :hour => valid_attributes
-        assigns(:hour).should be_a(Hour)
-        assigns(:hour).should be_persisted
+        assigns(:hours).should be_a(Hour)
+        assigns(:hours).should be_persisted
       end
 
       it "redirects to the created hour" do
@@ -83,7 +83,7 @@ describe HoursController do
         # Trigger the behavior that occurs when invalid params are submitted
         Hour.any_instance.stub(:save).and_return(false)
         post :create, :hour => {}
-        assigns(:hour).should be_a_new(Hour)
+        assigns(:hours).should be_a_new(Hour)
       end
 
       it "re-renders the 'new' template" do
@@ -110,7 +110,7 @@ describe HoursController do
       it "assigns the requested hour as @hour" do
         hour = Hour.create! valid_attributes
         put :update, :id => hour.id, :hour => valid_attributes
-        assigns(:hour).should eq(hour)
+        assigns(:hours).should eq(hour)
       end
 
       it "redirects to the hour" do
@@ -126,7 +126,7 @@ describe HoursController do
         # Trigger the behavior that occurs when invalid params are submitted
         Hour.any_instance.stub(:save).and_return(false)
         put :update, :id => hour.id, :hour => {}
-        assigns(:hour).should eq(hour)
+        assigns(:hours).should eq(hour)
       end
 
       it "re-renders the 'edit' template" do

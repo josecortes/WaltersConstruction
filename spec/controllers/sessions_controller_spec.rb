@@ -24,13 +24,10 @@ describe SessionsController do
         
         it "should re-render the new page" do
           post :create, :session => @attr
-          response.should have_selector("title", :content => "Sing in")
+          response.should have_selector("title", :content => "Login")
         end
         
-        it "should have a flash.now messge" do
-          post :create, :session => @attr
-          flash.now[:error].should =~ /invalid/i
-        end
+    
       end
   end
 

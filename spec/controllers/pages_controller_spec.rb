@@ -10,13 +10,6 @@ describe PagesController do
     end
   end
 
-  describe "GET 'emp_hours'" do
-    it "returns http success" do
-      get 'emp_hours'
-      response.should be_success
-    end
-  end
-
   describe "GET 'owner_home'" do
     it "returns http success" do
       get 'own_home'
